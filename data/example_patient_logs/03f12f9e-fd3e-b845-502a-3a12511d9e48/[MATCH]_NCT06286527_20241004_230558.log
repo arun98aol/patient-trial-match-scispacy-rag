@@ -1,0 +1,30 @@
+Before sharing the logs, here are the definitions to any UMLS code you will see:
+
+Patient ID: 03f12f9e-fd3e-b845-502a-3a12511d9e48
+Age: 0
+Gender: M
+Conditions: ['Medication review due (situation)']
+Medications: []
+########
+Trial Details
+Title: Quality of Sexual Life of PrEP Users
+1. Inclusion Criteria:
+   - current PrEP use
+   - adult
+2. Exclusion Criteria:
+   - unwilling to participate
+##########
+Match Check:
+1. Age = 0 vs [nan, nan] = MATCH
+2. Sex = M vs ALL = MATCH
+3. Health = Not Healthy vs Patients = MATCH
+4. Exclusion Criteria:
+   - Criterion 1: unwilling to participate = MATCH
+   - Exclusion Criteria Check: MATCH
+API Check:
+inclusionCriteriaMet:
+	- Patient meets the age criteria as no specific age requirement is set.
+	- Patient meets the sex criteria as the trial is open to all genders.
+exclusionCriteriaMet:
+	- Patient does not have the condition of being unwilling to participate.
+patientIsEligibleForTrial: True

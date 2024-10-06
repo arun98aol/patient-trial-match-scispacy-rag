@@ -1,0 +1,45 @@
+Before sharing the logs, here are the definitions to any UMLS code you will see:
+
+Patient ID: 03f12f9e-fd3e-b845-502a-3a12511d9e48
+Age: 0
+Gender: M
+Conditions: ['Medication review due (situation)']
+Medications: []
+########
+Trial Details
+Title: Pilot Study for the Development of a Diagnostic Score to Differentiate Myeloproliferative Neoplasms.
+1. Inclusion Criteria:
+   - Adult (18 years of age or older) with the diagnosis of essential thrombocytosis, prefibrotic myelofibrosis or overt myelofibrosis according to WHO 2016 criteria;
+   - Patient who has not received specific treatment for neoplasms;
+   - Patient who has signed the consent to participate in the study;
+   - Patient who has consented to be included in the "Malignant Haemopathies" collection at the University Hospital of Angers or Brest and for whom the samples necessary for the study are available in the biocollection.
+2. Exclusion Criteria:
+   - Patient with another hematologic neoplasm or progressive cancer at the time of diagnosis;
+   - Patient with a diagnosis of secondary myelofibrosis;
+   - Pregnant or breastfeeding woman;
+   - Person prived of liberty by judicial or administrative decision;
+   - Person subject to a legal protection measure;
+##########
+Match Check:
+1. Age = 0 vs [nan, nan] = MATCH
+2. Sex = M vs ALL = MATCH
+3. Health = Not Healthy vs Patients = MATCH
+4. Exclusion Criteria:
+   - Criterion 1: Patient with another hematologic neoplasm or progressive cancer at the time of diagnosis; = MATCH
+   - Criterion 2: Patient with a diagnosis of secondary myelofibrosis; = MATCH
+   - Criterion 3: Pregnant or breastfeeding woman; = MATCH
+   - Criterion 4: Person prived of liberty by judicial or administrative decision; = MATCH
+   - Criterion 5: Person subject to a legal protection measure; = MATCH
+   - Exclusion Criteria Check: MATCH
+API Check:
+inclusionCriteriaMet:
+	- Patient meets the age criteria.
+	- Patient meets the sex criteria.
+	- Patient meets the health criteria.
+exclusionCriteriaMet:
+	- Patient does not have another hematologic neoplasm or progressive cancer at the time of diagnosis.
+	- Patient does not have a diagnosis of secondary myelofibrosis.
+	- Patient is not a pregnant or breastfeeding woman.
+	- Patient is not a person deprived of liberty by judicial or administrative decision.
+	- Patient is not subject to a legal protection measure.
+patientIsEligibleForTrial: False

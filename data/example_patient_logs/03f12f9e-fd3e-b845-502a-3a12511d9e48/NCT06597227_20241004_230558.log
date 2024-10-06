@@ -1,0 +1,77 @@
+Before sharing the logs, here are the definitions to any UMLS code you will see:
+- Code: C0013227
+  Name: Pharmaceutical Preparations
+  Definition: Drugs intended for human or veterinary use, presented in their finished dosage form. Included here are materials used in the preparation and/or formulation of the finished dosage form.
+
+Patient ID: 03f12f9e-fd3e-b845-502a-3a12511d9e48
+Age: 0
+Gender: M
+Conditions: ['Medication review due (situation)']
+Medications: []
+########
+Trial Details
+Title: Proximal Gastrectomy Vs Total Gastrectomy in Locally Advanced Upper Gastric Cancer After Neoadjuvant Therapy
+1. Inclusion Criteria:
+   - To be eligible to participate in this study, all patients must meet all the following criteria:
+
+  1. The subjects voluntarily joined the study and were able to sign the informed consent with good compliance;
+  2. Age 18-75 years old (at the time of signing the informed consent), both male and female;
+  3. Histologically and/or cytologically confirmed upper gastric carcinoma (adenocarcinoma), locally advanced according to AJCC Edition 8 criteria, cT3-4 or N+M0 according to endoscopic ultrasound or enhanced CT/MRI scanning (combined with diagnostic laparoscopic exploration if necessary) , and consent to neoadjuvant therapy. Investigators assessed the lesion as resectable or potentially resectable;
+  4. Have not received systematic treatment for the current disease, including anti-tumor chemoradiotherapy/immunotherapy;
+  5. ECOG score 0-1;
+  6. Expected survival ≥6 months;
+  7. Preoperative chest, abdominal, pelvic CT or PET-CT to exclude distant metastasis;
+  8. The major organs function well and meet the following criteria:
+
+  <!-- -->
+
+  1. Blood routine examination (no blood transfusion within 14 days, no hematopoietic stimulating drugs to correct the state) : hemoglobin (Hb) ≥90g/L; Absolute neutrophil count (ANC) ≥1.5×109/L; Platelet (PLT) ≥80×109/L;
+  2. Biochemical examination: alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤2.5×ULN; Serum total bilirubin (TBIL) ≤1.5×ULN; Serum creatinine (Cr) ≤1.5×ULN, or creatinine clearance ≥60mL/min;
+  3. Coagulation function: activated partial thromboplastin time (APTT), International standardized ratio (INR), prothrombin time (PT) ≤1.5×ULN;
+  4. Doppler ultrasound evaluation: left ventricular ejection fraction (LVEF) ≥50%;
+  5. Assessed with adequate organ function by doctors. 9. Fertile subjects must use appropriate methods of contraception during the study period and within 120 days after the end of the study, have a negative serological pregnancy test within 7 days prior to study enrollment, and must be non-lactating subjects.
+2. Exclusion Criteria:
+   - To be eligible to participate in this study, all patients must meet all the following criteria:
+
+  1. The subjects voluntarily joined the study and were able to sign the informed consent with good compliance;
+  2. Age 18-75 years old (at the time of signing the informed consent), both male and female;
+  3. Histologically and/or cytologically confirmed upper gastric carcinoma (adenocarcinoma), locally advanced according to AJCC Edition 8 criteria, cT3-4 or N+M0 according to endoscopic ultrasound or enhanced CT/MRI scanning (combined with diagnostic laparoscopic exploration if necessary) , and consent to neoadjuvant therapy. Investigators assessed the lesion as resectable or potentially resectable;
+  4. Have not received systematic treatment for the current disease, including anti-tumor chemoradiotherapy/immunotherapy;
+  5. ECOG score 0-1;
+  6. Expected survival ≥6 months;
+  7. Preoperative chest, abdominal, pelvic CT or PET-CT to exclude distant metastasis;
+  8. The major organs function well and meet the following criteria:
+
+  <!-- -->
+
+  1. Blood routine examination (no blood transfusion within 14 days, no hematopoietic stimulating drugs to correct the state) : hemoglobin (Hb) ≥90g/L; Absolute neutrophil count (ANC) ≥1.5×109/L; Platelet (PLT) ≥80×109/L;
+  2. Biochemical examination: alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤2.5×ULN; Serum total bilirubin (TBIL) ≤1.5×ULN; Serum creatinine (Cr) ≤1.5×ULN, or creatinine clearance ≥60mL/min;
+  3. Coagulation function: activated partial thromboplastin time (APTT), International standardized ratio (INR), prothrombin time (PT) ≤1.5×ULN;
+  4. Doppler ultrasound evaluation: left ventricular ejection fraction (LVEF) ≥50%;
+  5. Assessed with adequate organ function by doctors. 9. Fertile subjects must use appropriate methods of contraception during the study period and within 120 days after the end of the study, have a negative serological pregnancy test within 7 days prior to study enrollment, and must be non-lactating subjects.
+##########
+Match Check:
+1. Age = 0 vs [nan, nan] = MATCH
+2. Sex = M vs ALL = MATCH
+3. Health = Not Healthy vs Patients = MATCH
+4. Exclusion Criteria:
+   - Criterion 1: To be eligible to participate in this study, all patients must meet all the following criteria:
+
+  1. The subjects voluntarily joined the study and were able to sign the informed consent with good compliance;
+  2. Age 18-75 years old (at the time of signing the informed consent), both male and female;
+  3. Histologically and/or cytologically confirmed upper gastric carcinoma (adenocarcinoma), locally advanced according to AJCC Edition 8 criteria, cT3-4 or N+M0 according to endoscopic ultrasound or enhanced CT/MRI scanning (combined with diagnostic laparoscopic exploration if necessary) , and consent to neoadjuvant therapy. Investigators assessed the lesion as resectable or potentially resectable;
+  4. Have not received systematic treatment for the current disease, including anti-tumor chemoradiotherapy/immunotherapy;
+  5. ECOG score 0-1;
+  6. Expected survival ≥6 months;
+  7. Preoperative chest, abdominal, pelvic CT or PET-CT to exclude distant metastasis;
+  8. The major organs function well and meet the following criteria:
+
+  <!-- -->
+
+  1. Blood routine examination (no blood transfusion within 14 days, no hematopoietic stimulating drugs to correct the state) : hemoglobin (Hb) ≥90g/L; Absolute neutrophil count (ANC) ≥1.5×109/L; Platelet (PLT) ≥80×109/L;
+  2. Biochemical examination: alanine aminotransferase (ALT) and aspartate aminotransferase (AST) ≤2.5×ULN; Serum total bilirubin (TBIL) ≤1.5×ULN; Serum creatinine (Cr) ≤1.5×ULN, or creatinine clearance ≥60mL/min;
+  3. Coagulation function: activated partial thromboplastin time (APTT), International standardized ratio (INR), prothrombin time (PT) ≤1.5×ULN;
+  4. Doppler ultrasound evaluation: left ventricular ejection fraction (LVEF) ≥50%;
+  5. Assessed with adequate organ function by doctors. 9. Fertile subjects must use appropriate methods of contraception during the study period and within 120 days after the end of the study, have a negative serological pregnancy test within 7 days prior to study enrollment, and must be non-lactating subjects. = NO MATCH
+      + [C0013227] Medication review due (situation)
+   - Exclusion Criteria Check: NO MATCH

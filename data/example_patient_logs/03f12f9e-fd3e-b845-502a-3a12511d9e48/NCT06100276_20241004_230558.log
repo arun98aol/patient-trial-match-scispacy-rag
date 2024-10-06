@@ -1,0 +1,46 @@
+Before sharing the logs, here are the definitions to any UMLS code you will see:
+- Code: C0013227
+  Name: Pharmaceutical Preparations
+  Definition: Drugs intended for human or veterinary use, presented in their finished dosage form. Included here are materials used in the preparation and/or formulation of the finished dosage form.
+
+Patient ID: 03f12f9e-fd3e-b845-502a-3a12511d9e48
+Age: 0
+Gender: M
+Conditions: ['Medication review due (situation)']
+Medications: []
+########
+Trial Details
+Title: Safety, Tolerability, and Exploratory Efficacy Study of Intrathecally Administered Gene Therapy AMT-162 in Adult Participants with SOD1 Amyotrophic Lateral Sclerosis (SOD1-ALS)
+1. Inclusion Criteria:
+   - Confirmed clinical and genetic diagnosis of SOD1-mediated ALS (SOD1-ALS) experiencing signs and/or symptoms of lower motor neuron dysfunction (weakness, atrophy, cramps, fasciculations), with or without upper motor neuron symptoms (weakness, bring reflexes, spasticity).
+   - ALSFRS-R score ≥ 25 at Screening.
+   - Slow vital capacity (SVC) ≥50% of predicted normal value.
+   - Capable of providing informed consent and complying with trial procedures, including: medically able to undergo lumbar puncture and has a responsible caregiver able to attend all clinic visit with the Participant.
+2. Exclusion Criteria:
+   - SOD1 pathogenic or likely pathogenic variants in amino acid regions 43-47.
+   - Pathogenic repeat expansion in the C9orf72 gene
+   - Any of the following prior or concomitant treatments:
+
+  * Any prior SOD1 suppression therapy with viral microRNA mediators
+  * Prior SOD suppression therapy with antisense oligonucleotide (ASO) mediators such as tofersen (QALSODY™). Exception: Patients who previously received tofersen may be enrolled if the last dose of tofersen was received at least 20 weeks prior to the first Screening assessment and if there were no previous tofersen-related SAEs or ongoing tofersen-related adverse events that would increase the risk of receiving AMT-162, per Investigator judgment.
+  * Other ALS medications riluzole (RILUTEK®, TIGLUTIK®), edaravone (RADICAVA®), and sodium phenylbutyrate and taururosdiol combination (RELYVRIO) or bioequivalents are allowed if dose is stable for 30 days prior to immunosuppression.
+  * Any prior administration of an AAV gene therapy.
+   - Participants must be willing to forego new ALS treatments through at least 6 months after infusion of AMT-162. After 6 months, Investigators and participants may decide to add new ALS medications or change existing ALS medications.
+##########
+Match Check:
+1. Age = 0 vs [nan, nan] = MATCH
+2. Sex = M vs ALL = MATCH
+3. Health = Not Healthy vs Patients = MATCH
+4. Exclusion Criteria:
+   - Criterion 1: SOD1 pathogenic or likely pathogenic variants in amino acid regions 43-47. = MATCH
+   - Criterion 2: Pathogenic repeat expansion in the C9orf72 gene = MATCH
+   - Criterion 3: Any of the following prior or concomitant treatments:
+
+  * Any prior SOD1 suppression therapy with viral microRNA mediators
+  * Prior SOD suppression therapy with antisense oligonucleotide (ASO) mediators such as tofersen (QALSODY™). Exception: Patients who previously received tofersen may be enrolled if the last dose of tofersen was received at least 20 weeks prior to the first Screening assessment and if there were no previous tofersen-related SAEs or ongoing tofersen-related adverse events that would increase the risk of receiving AMT-162, per Investigator judgment.
+  * Other ALS medications riluzole (RILUTEK®, TIGLUTIK®), edaravone (RADICAVA®), and sodium phenylbutyrate and taururosdiol combination (RELYVRIO) or bioequivalents are allowed if dose is stable for 30 days prior to immunosuppression.
+  * Any prior administration of an AAV gene therapy. = NO MATCH
+      + [C0013227] Medication review due (situation)
+   - Criterion 4: Participants must be willing to forego new ALS treatments through at least 6 months after infusion of AMT-162. After 6 months, Investigators and participants may decide to add new ALS medications or change existing ALS medications. = NO MATCH
+      + [C0013227] Medication review due (situation)
+   - Exclusion Criteria Check: NO MATCH

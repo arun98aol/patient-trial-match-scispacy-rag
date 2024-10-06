@@ -1,0 +1,50 @@
+Before sharing the logs, here are the definitions to any UMLS code you will see:
+
+Patient ID: 03f12f9e-fd3e-b845-502a-3a12511d9e48
+Age: 0
+Gender: M
+Conditions: ['Medication review due (situation)']
+Medications: []
+########
+Trial Details
+Title: PMCF Study on the Safety, Performance and Clinical Benefits Data of the Quattro X Broadband
+1. Inclusion Criteria:
+   - Subject treated with the Quattro® X Suture Anchor with BroadBand™ Tape for rotator cuff repair;
+   - Older than 18 years and skeletally mature;
+   - Willing and able to comply with the study procedures;
+   - Subject is capable of understanding the doctor's explanations, following his instructions and is able to participate in the follow-up program;
+   - Subject is able to read and understand the ICF and has voluntarily provided written informed consent.
+2. Exclusion Criteria:
+   - Presence of infection;
+   - Insufficient or immature bone;
+   - Insufficient blood supply or previous infections which may hinder the healing process;
+   - Foreign body sensitivity;
+   - Subject is vulnerable (prisoner, mentally incompetent or unable to understand what participation to the study entails, a known alcohol or drug abuser, anticipated to be non-compliant);
+   - The subject is unwilling or unable to give consent or to comply with the follow-up program;
+   - Subject meets any contraindications of the appropriate Instruction for Use.
+##########
+Match Check:
+1. Age = 0 vs [nan, nan] = MATCH
+2. Sex = M vs ALL = MATCH
+3. Health = Not Healthy vs Patients = MATCH
+4. Exclusion Criteria:
+   - Criterion 1: Presence of infection; = MATCH
+   - Criterion 2: Insufficient or immature bone; = MATCH
+   - Criterion 3: Insufficient blood supply or previous infections which may hinder the healing process; = MATCH
+   - Criterion 4: Foreign body sensitivity; = MATCH
+   - Criterion 5: Subject is vulnerable (prisoner, mentally incompetent or unable to understand what participation to the study entails, a known alcohol or drug abuser, anticipated to be non-compliant); = MATCH
+   - Criterion 6: The subject is unwilling or unable to give consent or to comply with the follow-up program; = MATCH
+   - Criterion 7: Subject meets any contraindications of the appropriate Instruction for Use. = MATCH
+   - Exclusion Criteria Check: MATCH
+API Check:
+inclusionCriteriaMet:
+	- Patient meets the gender criteria.
+exclusionCriteriaMet:
+	- Patient does not have presence of infection as required.
+	- Patient does not have insufficient or immature bone as required.
+	- Patient does not have insufficient blood supply or previous infections which may hinder the healing process as required.
+	- Patient does not have foreign body sensitivity as required.
+	- Patient is not vulnerable as defined by the trial criteria.
+	- Patient is willing and able to give consent and comply with the follow-up program.
+	- Patient does not meet any contraindications of the appropriate Instruction for Use.
+patientIsEligibleForTrial: False

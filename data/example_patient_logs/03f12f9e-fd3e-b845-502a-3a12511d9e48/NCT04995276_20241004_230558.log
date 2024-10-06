@@ -1,0 +1,22 @@
+Before sharing the logs, here are the definitions to any UMLS code you will see:
+
+Patient ID: 03f12f9e-fd3e-b845-502a-3a12511d9e48
+Age: 0
+Gender: M
+Conditions: ['Medication review due (situation)']
+Medications: []
+########
+Trial Details
+Title: PostmenopausAL heaLth And DIseAse (PALLADIA) Study
+1. Inclusion Criteria:
+   - Postmenopausal women
+2. Exclusion Criteria:
+   - Men Women of reproductive age
+##########
+Match Check:
+1. Age = 0 vs [nan, nan] = MATCH
+2. Sex = M vs FEMALE = NO MATCH
+3. Health = Not Healthy vs Patients = MATCH
+4. Exclusion Criteria:
+   - Criterion 1: Men Women of reproductive age = MATCH
+   - Exclusion Criteria Check: MATCH

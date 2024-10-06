@@ -1,0 +1,190 @@
+Great work! Works well.
+
+Let's take a look at my existing codebase for checking eligibility criteria of a patient given a trial from df trials (fetched from ClinicalTrials.gov)
+
+```python
+import pandas as pd
+import numpy as np
+
+# Helper function to convert age fields from df_trials to integers
+def convert_age(age_str):
+    if pd.isna(age_str) or age_str in ['Not Specified', 'N/A']:
+        return np.nan  # Return NaN for missing or unspecified ages
+    try:
+        return int(age_str.split()[0])  # Convert '18 Years' -> 18
+    except:
+        return np.nan  # Handle any errors
+
+# Helper function to check if patient age matches the trial's age criteria
+def match_age(patient_age, min_age, max_age):
+    if pd.isna(min_age):  # If no minimum age is specified, assume 0
+        min_age = 0
+    if pd.isna(max_age):  # If no maximum age is specified, assume no upper limit
+        max_age = 120
+    return min_age <= patient_age <= max_age
+
+# Helper function to check if the patient’s sex matches the trial’s sex requirement
+def match_sex(patient_gender, trial_gender):
+    if trial_gender == "ALL":
+        return True
+    return patient_gender == trial_gender
+
+# Helper function to determine if a patient is a healthy volunteer
+def is_healthy_volunteer(patient_conditions):
+    # If the patient has no conditions, they are considered a healthy volunteer
+    # If all conditions have ended (STOP is not NaT), they are also healthy
+    active_conditions = patient_conditions[(patient_conditions['Condition_End'].isna()) | 
+                                           (patient_conditions['Condition_End'] > pd.Timestamp.now())]
+    return active_conditions.empty
+
+# Main function to match patients to trials in chunks
+def match_patients_to_trials(patient_profiles, df_trials, chunk_size=100):
+    # Convert age fields in df_trials to integers
+    df_trials['Minimum_Age'] = df_trials['Minimum_Age'].apply(convert_age)
+    df_trials['Maximum_Age'] = df_trials['Maximum_Age'].apply(convert_age)
+
+    # List to store all matches
+    matches = []
+
+    # Chunk processing of patients
+    for i in range(0, len(patient_profiles), chunk_size):
+        patient_chunk = patient_profiles.iloc[i:i + chunk_size]
+
+        # Iterate over each patient in the chunk
+        for patient_id, patient_data in patient_chunk.groupby('PatientID'):
+            patient_age = patient_data['Age'].values[0]
+            patient_gender = patient_data['Gender'].values[0]
+            is_healthy = is_healthy_volunteer(patient_data)
+
+            # Iterate over each trial and check for matching criteria
+            for _, trial in df_trials.iterrows():
+                # Age match
+                if not match_age(patient_age, trial['Minimum_Age'], trial['Maximum_Age']):
+                    continue
+
+                # Sex match
+                if not match_sex(patient_gender, trial['Sex']):
+                    continue
+
+                # Healthy volunteers check
+                if trial['Healthy_Volunteers'] and not is_healthy:
+                    continue
+
+                # If all criteria are matched, append the result
+                matches.append({
+                    'PatientID': patient_id,
+                    'TrialID': trial['NCTId'],
+                    'TrialTitle': trial['Title'],
+                    'EligibilityMet': 'Age, Sex, Healthy Volunteer Matched'
+                })
+
+    # Convert the matches list to a DataFrame
+    matches_df = pd.DataFrame(matches)
+
+    return matches_df
+
+# Example usage:
+# Assuming patient_profiles and df_trials are already loaded
+
+# Set chunk size to 100
+chunk_size = 100
+
+# Call the matching function
+matched_trials = match_patients_to_trials(patient_profiles, df_trials, chunk_size=chunk_size)
+matched_trials.head()
+```
+
+import pandas as pd
+import numpy as np
+
+# Helper function to convert age fields from df_trials to integers
+def convert_age(age_str):
+    if pd.isna(age_str) or age_str in ['Not Specified', 'N/A']:
+        return np.nan  # Return NaN for missing or unspecified ages
+    try:
+        return int(age_str.split()[0])  # Convert '18 Years' -> 18
+    except:
+        return np.nan  # Handle any errors
+
+# Helper function to check if patient age matches the trial's age criteria
+def match_age(patient_age, min_age, max_age):
+    if pd.isna(min_age):  # If no minimum age is specified, assume 0
+        min_age = 0
+    if pd.isna(max_age):  # If no maximum age is specified, assume no upper limit
+        max_age = 120
+    return min_age <= patient_age <= max_age
+
+# Helper function to check if the patient’s sex matches the trial’s sex requirement
+def match_sex(patient_gender, trial_gender):
+    if trial_gender == "ALL":
+        return True
+    return patient_gender == trial_gender
+
+# Helper function to determine if a patient is a healthy volunteer
+def is_healthy_volunteer(patient_conditions):
+    # If the patient has no conditions, they are considered a healthy volunteer
+    # If all conditions have ended (STOP is not NaT), they are also healthy
+    active_conditions = patient_conditions[(patient_conditions['Condition_End'].isna()) | 
+                                           (patient_conditions['Condition_End'] > pd.Timestamp.now())]
+    return active_conditions.empty
+
+# Main function to match patients to trials in chunks
+def match_patients_to_trials(patient_profiles, df_trials, chunk_size=100):
+    # Convert age fields in df_trials to integers
+    df_trials['Minimum_Age'] = df_trials['Minimum_Age'].apply(convert_age)
+    df_trials['Maximum_Age'] = df_trials['Maximum_Age'].apply(convert_age)
+
+    # List to store all matches
+    matches = []
+
+    # Chunk processing of patients
+    for i in range(0, len(patient_profiles), chunk_size):
+        patient_chunk = patient_profiles.iloc[i:i + chunk_size]
+
+        # Iterate over each patient in the chunk
+        for patient_id, patient_data in patient_chunk.groupby('PatientID'):
+            patient_age = patient_data['Age'].values[0]
+            patient_gender = patient_data['Gender'].values[0]
+            is_healthy = is_healthy_volunteer(patient_data)
+
+            # Iterate over each trial and check for matching criteria
+            for _, trial in df_trials.iterrows():
+                # Age match
+                if not match_age(patient_age, trial['Minimum_Age'], trial['Maximum_Age']):
+                    continue
+
+                # Sex match
+                if not match_sex(patient_gender, trial['Sex']):
+                    continue
+
+                # Healthy volunteers check
+                if trial['Healthy_Volunteers'] and not is_healthy:
+                    continue
+
+                # If all criteria are matched, append the result
+                matches.append({
+                    'PatientID': patient_id,
+                    'TrialID': trial['NCTId'],
+                    'TrialTitle': trial['Title'],
+                    'EligibilityMet': 'Age, Sex, Healthy Volunteer Matched'
+                })
+
+    # Convert the matches list to a DataFrame
+    matches_df = pd.DataFrame(matches)
+
+    return matches_df
+
+# Example usage:
+# Assuming patient_profiles and df_trials are already loaded
+
+# Set chunk size to 100
+chunk_size = 100
+
+# Call the matching function
+matched_trials = match_patients_to_trials(patient_profiles, df_trials, chunk_size=chunk_size)
+matched_trials.head()
+```
+
+Here's how we need to modify the existing codebase - 
+
+1.  After the basic checks (age, sex, health) are done, if patient passes all checks, lets check the exclusion criteria first. Check if 

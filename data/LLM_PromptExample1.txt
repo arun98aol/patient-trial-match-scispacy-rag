@@ -1,0 +1,389 @@
+Let me show you some sample data. 
+
+```patient_profiles
+PatientID	Age	Gender	Condition_Description	Condition_Code	Condition_Start	Condition_End	Medication_Description	Medication_Code	Medication_Start	Medication_End	Encounter
+0	e93300bf-3a53-55c0-bd38-2ede59462f21	17	F	Seasonal allergic rhinitis	367498001	2010-02-13	NaT	Fexofenadine hydrochloride 30 MG Oral Tablet	997488.0	2010-02-13 20:39:01+00:00	NaT	54610a6c-47b4-79f4-e75d-80f3ed4c8437
+1	e93300bf-3a53-55c0-bd38-2ede59462f21	17	F	Medication review due (situation)	314529007	2012-09-05	2016-09-21	NaN	NaN	NaT	NaT	54f02fad-1ad7-7139-ae76-1fc8db2ac30c
+2	e93300bf-3a53-55c0-bd38-2ede59462f21	17	F	Acute bronchitis (disorder)	10509002	2016-09-10	2016-09-17	Acetaminophen 325 MG Oral Tablet	313782.0	2016-09-10 04:00:34+00:00	2016-09-17 04:00:34+00:00	0dcd99ad-9b21-681c-8cba-2321c6cc3ec2
+3	e93300bf-3a53-55c0-bd38-2ede59462f21	17	F	Medication review due (situation)	314529007	2016-09-28	2020-10-21	NaN	NaN	NaT	NaT	39bc4565-99ba-afb8-4298-92165d168052
+4	e93300bf-3a53-55c0-bd38-2ede59462f21	17	F	Concussion injury of brain (disorder)	110030002	2018-08-09	2018-10-18	NaN	NaN	NaT	NaT	e6d0e44a-a960-970d-d526-1f21f39be969
+```
+I converted the df_trials df into a json so you can see all the sample data without truncation, but it is still a df in the code.
+```df_trials
+[{"NCTId":"NCT06126627","Title":"Brain and Voice Signatures in Teachers","Inclusion_Criteria":["Teachers (max. 10 years full-time) or student teachers in good health between 21 and 39 years with symptoms of vocal fatigue.\n\nControl participants in good health between 21 and 39 years without symptoms of vocal fatigue."],"Exclusion_Criteria":["Lefthandedness","Smoking (past 5 years)","Known changes of the vocal folds (e.g., vocal fold nodules), vocal fold paralysis, surgeries on the larynx or thryoid or current organic or neurological changes of the vocal folds or vocal function per videoendoscopy and -stroboscopy of the larynx","History of voice therapy","Hoarseness","Respiratory illness, allergies (respiratory, silver), reflux or asthma at time of participation","Hearing disorder or hearing aids","Psychological, neurological or endocrinological disorders","Psychotropic or steorid medications","Body mass index \\> 30","Indications against MRI such as metail parts in or on the body (e.g., permanent dental prostheses or braces, screws, prostheses, piercings or large tattoos","Nearsightedness \\> -5 diopters, if only glasses are worn","Claustrophobia","Pregnancy"],"Minimum_Age":"21 Years","Maximum_Age":"39 Years","Sex":"FEMALE","Healthy_Volunteers":true},{"NCTId":"NCT04807127","Title":"A Single-cell Approach to Identify Biomarkers of Pulmonary Toxicity for Immune Checkpoint Blockade","Inclusion_Criteria":[],"Exclusion_Criteria":[],"Minimum_Age":"18 Years","Maximum_Age":"120 Years","Sex":"ALL","Healthy_Volunteers":false},{"NCTId":"NCT06330727","Title":"Effects of Coffee Consumption on Metabolic Markers in Adults With Prediabetes and Obesity","Inclusion_Criteria":["Age between 18 and 59 years old;","Diagnosis of Prediabetes according to the WHO criteria (fasting glucose=6.1-6.9 mmol\/L and\/or 2-hour post-OGTT glucose=7.8- 11.0 mmol\/L);","Body mass index ( BMI ) \u2265 28kg\/m2;","No coffee intake in the past month;","Provide written informed consent and be willing to participate."],"Exclusion_Criteria":["Patients with diagnosis of diabetes, or taking anti-diabetic medication;","Patients with cardiovascular or cerebrovascular diseases, cancer, renal disease, liver disease, other chronic diseases affecting glucose and lipid metabolism, etc;","Participants with known hypersensitivity or intolerance to coffee, or unwilling to accept coffee;","Pregnancy, planned pregnancy, or lactation;","Investigators, for any reason, consider the participants inappropriate for the study (e.g., uncontrolled bipolar disease)."],"Minimum_Age":"18 Years","Maximum_Age":"59 Years","Sex":"ALL","Healthy_Volunteers":true},{"NCTId":"NCT06293027","Title":"Optical Imaging as a Tool for Monitoring Brain Function in Fragile X Syndrome","Inclusion_Criteria":["FXS participants:","Age criteria: Between ages 2 years to 50 years old, inclusive at time of enrollment","Diagnosed with FXS with a previously identified pathogenic or likely pathogenic variant in the FMR1 gene.","Must also meet the diagnostic criteria for FXS.","Male\n\nTypically developing participants:","Age criteria: Between ages 2 years to 50 years old, inclusive at time of enrollment","Age- and sex-matched to the FXS participants","No underlying genetic diagnosis or past\/chronic medical condition associated with increased risk for autism spectrum disorder (ASD) and\/or ID","Typical neurodevelopment for age (no established diagnosis or clinical suspicion for ASD or ID)"],"Exclusion_Criteria":["For FXS and Typically developing participants:","Unwilling or unable to comply with study procedures and assessments","Contraindications to fNIRS, such as uncooperative or destructive behaviors preventing lead placement or capture by fNIRS equipment","Traumatic loss of consciousness in the last year","Has taken an investigational drug as part of another research study, within 30 days prior to study enrollment","If participant is judged by the PI or Sub-I to be inappropriate for the study for any reason\n\nFor Typically developing participants:","Known or suspected cognitive impairment","Known history of MRI abnormality","Current use of psychotropic medications"],"Minimum_Age":"2 Years","Maximum_Age":"Not Specified","Sex":"MALE","Healthy_Volunteers":true},{"NCTId":"NCT04362527","Title":"Milrinone Infusion for VAsospam Treatment in Subarachnoid hemoRrhage","Inclusion_Criteria":["Adult patients hospitalized for aneurysmal SAH","First episode of vasospasm, with a diagnosis confirmed on cerebral arterial CT-scanner","Delay between diagnosis of vasospasm (i.e. CT-scanner) and inclusion \u22646 hours"],"Exclusion_Criteria":["Initial Glasgow score at 3 with a bilateral mydriasis","Moribund patient","Pregnant woman","Contraindication to Milrinone (obstructive cardiomyopathy...)","Cerebral infarction in the vasospasm area already present on the CT-scanner at the time of diagnosis (lack of expected benefit of treatment in this case- according to medical judgement)","Non-affiliation to French health care coverage,","Adult patient protected under the law (guardianship)","Cardiac failure necessitating inotropic agents","Uncontrolled Intracranial hypertension (ICP\\>25 mmHg for more than 20 min)","Inclusion in an interventional study using Milrinone, or evaluating a treatment of cerebral vasospasm or with the same primary endpoint (mRS at 3 months)."],"Minimum_Age":"18 Years","Maximum_Age":"Not Specified","Sex":"ALL","Healthy_Volunteers":false},{"NCTId":"NCT05034627","Title":"Calaspargase Pegol-Mnkl and Cobimetinib for the Treatment of Locally Advanced or Metastatic Pancreatic Cancer","Inclusion_Criteria":["Participant must provide written informed consent before any study-specific procedures or interventions are performed","Participants are \\>= 18 years old at the time of informed consent. Both men and women of all races and ethnic groups will be included","Eastern Cooperative Oncology Group (ECOG) performance status of 0-2","Histologically or cytologically-proven adenocarcinoma of the exocrine pancreas with locally advanced or metastatic disease","Must have measurable disease as defined by Response Evaluation Criteria in Solid Tumors (RECIST) version (v)1.1","Must have at least one disease lesion that is amenable to biopsy procedures performed per institutional standards","Must have progressed on, been intolerant to, or refused systemic therapy that is consistent with institutional standards (e.g., Gemcitabine-based, or fluorouracil, irinotecan, leucovorin and oxaliplatin \\[FOLFORINOX\\])","Must not have received any systemic therapy or other investigational agents within 30 days or 5 half-lives (whichever is longer) from first dose of study therapy\n\n  * This requirement is waived for patients receiving cobimetinib or other investigational agent(s) as part of participation in NCT04005690, provided that all prior drug-related toxicities have resolved to Grade \u2264 1 prior to initiating study intervention","Hemoglobin: \\>= 9.0 g\/dL with no blood transfusion within 14 days of starting treatment","White blood cells (WBC): \\> 3 x 10\\^9\/L","Absolute neutrophil count (ANC): \\>= 1.5 x 10\\^9\/L (\\> 1500 per mm\\^3)","Platelet count: \\>= 100 x 10\\^9\/L (\\> 100,000 per mm\\^3)","Creatinine =\\< 1.5 x upper limit of normal (ULN), or measured or calculated creatinine clearance \\>= 60 mL\/min\/1.73 m\\^2 for participants with creatinine levels \\> 1 x institutional (ULN)","Serum bilirubin: =\\< 1.5 x institutional ULN","Aspartate aminotransferase (AST)\/alanine aminotransferase (ALT): =\\< 2.5 x ULN","Participants of childbearing potential (POCBP) must agree to abstain from sexual intercourse or use effective non-hormonal methods of contraception starting with the first dose of study therapy through 90 days after the last dose of study therapy (because calaspargase pegol can render hormonal contraceptives ineffective)","POCBP may participate provided they have a negative serum pregnancy test at screening and a negative serum OR urine pregnancy test within 7 days of starting treatment"],"Exclusion_Criteria":["Concomitant use of other anti-cancer therapy (chemotherapy, immunotherapy, hormonal therapy (hormone replacement therapy is acceptable), radiotherapy (except for palliative), biological therapy or other novel agent) or live virus and live bacterial vaccines while receiving study medication","Prior treatment with an L-asparaginase therapy","Known severe hypersensitivity to calaspargase pegol-mknl (or equivalent) or to cobimetinib (or equivalent), or to any excipient of these medicinal products, or history of allergic reactions attributed to compounds of similar chemical or biologic composition to calaspargase pego-mknl or cobimetinib","Use of known strong CYP3A inhibitors (e.g., itraconazole, telithromycin, clarithromycin, protease inhibitors boosted with ritonavir or cobicistat, indinavir, saquinavir, nelfinavir, boceprevir, telaprevir), known strong CYP3A inducers (e.g., phenobarbital, enzalutamide, phenytoin, rifampicin, rifabutin, rifapentine, carbamazepine, nevirapine and St John's Wort) or moderate CYP3A inducers (e.g., bosentan, efavirenz, modafinil) within 7 days of prior to initiating study treatment or on going requirement for these medications","Uncontrolled serious thrombosis","Uncontrolled severe or symptomatic coagulopathy; exclude if:\n\n  * Prothrombin time (PT) \\>= 1.5 x ULN, or\n  * International normalized ratio (INR) \\>= 1.5 x ULN, or\n  * Fibrinogen =\\< 0.66 x LLN","Known history of chronic pancreatitis or recurrent acute pancreatitis, or at time of screening evidence of acute pancreatitis, defined by at least two of the following:\n\n  * Clinical symptoms of upper abdominal pain\n  * Serum amylase or lipase that is \\>= 3 x ULN\n  * Imaging evidence (computed tomography \\[CT\\], magnetic resonance imaging \\[MRI\\], ultrasonography)","Significant cardiac disease within 6 months prior to start of study treatment, including any of the following:\n\n  * New York Heart Association class III or IV,\n  * Congestive heart failure, acute coronary syndrome, and\/or stroke, or\n  * Left ventricular ejection fraction (LVEF) \\< 40% by echocardiogram (ECHO) or multigated acquisition (MUGA) scan obtained within 28 days prior to start of study treatment","Known risk factors for ocular toxicity, consisting of any of the following:\n\n  * History of serous retinopathy\n  * History of retinal vein occlusion (RVO)\n  * Evidence of ongoing serous retinopathy or RVO at screening","Uncontrolled hypertension, or hypertension that cannot otherwise be clinically managed before initiating study therapy","Participant is known to have dysphagia, short-gut syndrome, gastroparesis, or other conditions that limit the ingestion or gastrointestinal absorption of drugs administered orally","Participant has active uncontrolled systemic fungal, bacterial, or viral infection (defined as ongoing signs\/symptoms related to the infection without improvement despite appropriate antibiotics, antiviral therapy, and\/or other treatment)","Participant has corrected QT (QTc) interval (i.e., Fridericia's correction \\[QTcF\\]) \\>= 450 ms or other factors that increase the risk of QT prolongation or arrhythmic events (e.g., heart failure, hypokalemia, family history of long QT interval syndrome) at screening","Psychiatric illness\/social situations that would limit compliance with study requirements","Any concurrent severe and\/or uncontrolled medical condition (e.g. uncontrolled diabetes, infection, hypertension, etc.)","Participant is pregnant or breastfeeding, or expecting to conceive or father children within the projected duration of the trial, starting with the screening visit through 90 days after the last dose of trial treatment","Judgment by the investigator that the patient should not participate in the study if the patient is unlikely to comply with study procedures, restrictions and requirements"],"Minimum_Age":"18 Years","Maximum_Age":"Not Specified","Sex":"ALL","Healthy_Volunteers":false},{"NCTId":"NCT05943327","Title":"A Study Investigating Lu AG06474 in Healthy Young Participants","Inclusion_Criteria":["The participant has a body mass index (BMI) \u226518.5 and \u226430 kilograms per meter squared (kg\/m\\^2) at the Screening Visit and at the Baseline Visit.","The participant has a resting supine pulse \u226550 and \u2264100 beats per minute (bpm) at the Screening Visit and at the Baseline Visit. For physically\/athletically well-trained participants, the lower limit is \u226545 bpm.","The participant has a resting supine systolic blood pressure \u226591 and \u2264140 millimeters of mercury (mmHg) and a resting supine diastolic blood pressure \u226551 and \u226485 mmHg at the Screening Visit and at the Baseline Visit."],"Exclusion_Criteria":["The participant has previously been dosed with Lu AG06474.","The participant has participated in a clinical trial \\<30 days prior to the Screening Visit.","The participant has taken any investigational medicinal product \u226530 days or \\<5 half-lives of that product, whichever is longer, prior to the first dose of IMP."],"Minimum_Age":"18 Years","Maximum_Age":"45 Years","Sex":"ALL","Healthy_Volunteers":true},{"NCTId":"NCT02647827","Title":"Acupuncture or Metformin for Insulin Resistance in Women With PCOS","Inclusion_Criteria":[],"Exclusion_Criteria":[],"Minimum_Age":"18 Years","Maximum_Age":"40 Years","Sex":"FEMALE","Healthy_Volunteers":true},{"NCTId":"NCT04080427","Title":"Effects of Delta9-tetrahydrocannabinol (THC) on Retention of Memory for Fear Extinction Learning in PTSD: R33 Study","Inclusion_Criteria":["Between ages 18-60","Willing and able to consent to study","Generally medically and neurologically healthy (including no evidence of intellectual disability or serious cognitive impairment that would interfere with task performance)","Exposure to Criterion A stressor defined by CAPS-5 and identified by Life Events Checklist-5 (LEC-5)","Significant PTSD severity as indicated by CAPS-5 diagnosis and\/or score \\>= 25 of at least one month prior to study entry, PTSD is patient's primary concern"],"Exclusion_Criteria":["Positive urine pregnancy test prior to fMRI, self-reported current pregnancy during screening, or planning pregnancy","Currently breastfeeding\/ lactating","MRI contraindications (e.g., ferrous metal in head\/body)","Pervasive development disorder history","Traumatic brain injury (TBI) with current cognitive impairment related to TBI","Risk of harm to self or others that requires immediate intervention","Presence of contraindications, current or past allergic or adverse reaction, or known sensitivity to cannabinoid-like substances (dronabinol\/marijuana\/cannabis\/THC, cannabinoid oil, sesame oil, gelatin, glycerin, and titanium dioxide)","Lack of fluency in English","Inability to tolerate small, enclosed spaces without anxiety (e.g. claustrophobia","Exclusively left-handed (score of -100 on Handedness Questionnaire)","Current or past diagnosis of bipolar, schizophrenia spectrum, psychotic and related disorders","Current severe alcohol or substance use","Comorbid mood or anxiety disorder that is primary to PTSD","Concomitant treatment with medication taken daily that has level 1 evidence indicating severe drug-drug interactions with dronabinol"],"Minimum_Age":"18 Years","Maximum_Age":"60 Years","Sex":"ALL","Healthy_Volunteers":false},{"NCTId":"NCT05444127","Title":"Oral Health and Wilson's Disease: SOMAWI","Inclusion_Criteria":["Express consent to participate in the study","Member of or beneficiary of a social security scheme","For cases: Affected by Wilson's disease","For controls: Benefiting from a first routine dental consultation with dental panoramic imaging, outside of an emergency context or treatment follow-up\/maintenance"],"Exclusion_Criteria":["Patient benefiting from a legal protection measure","Pregnant or breastfeeding women","Severe psychiatric disorders with behavioral disorders","For cases:\n\n  * hepatic or neurological decompensation\n  * liver transplant patient","For witnesses:\n\n  * Patient with hepatic or neurological disease\n  * Patient taking dietary supplements enriched with copper or zinc or zinc supplementation\n  * Patient wearing removable prostheses with zinc-enriched prosthetic adhesives (Fixodent ProPlus\u00ae)"],"Minimum_Age":"18 Years","Maximum_Age":"Not Specified","Sex":"ALL","Healthy_Volunteers":true}]
+```
+
+Here's my existing codebase where I process patient, conditions and medications data. 
+
+```python
+file_path = 'synthea_100/patients.csv'
+patients_df = pd.read_csv(file_path)
+patients_df.info()
+
+medication_file_path = 'synthea_100/medications.csv'
+medications_df = pd.read_csv(medication_file_path)
+medications_df.info()
+
+conditions_file_path = 'synthea_100/conditions.csv'
+conditions_df = pd.read_csv(conditions_file_path)
+conditions_df.info()
+
+from datetime import datetime
+
+# 1. Age Calculation
+# Convert BIRTHDATE to datetime format
+patients_df['BIRTHDATE'] = pd.to_datetime(patients_df['BIRTHDATE'])
+
+# Calculate the current age
+current_date = datetime.now()
+patients_df['AGE'] = patients_df['BIRTHDATE'].apply(lambda x: (current_date - x).days // 365)
+
+# 2. Convert START and STOP dates in both conditions and medications to datetime
+conditions_df['START'] = pd.to_datetime(conditions_df['START'])
+conditions_df['STOP'] = pd.to_datetime(conditions_df['STOP'])
+
+medications_df['START'] = pd.to_datetime(medications_df['START'])
+medications_df['STOP'] = pd.to_datetime(medications_df['STOP'])
+
+# 3. Merge Patient Data with Conditions based on PATIENT field
+patients_conditions = pd.merge(patients_df, conditions_df, left_on='Id', right_on='PATIENT', how='left')
+
+# 4. Merge Conditions with Medications based on the ENCOUNTER field
+conditions_medications = pd.merge(patients_conditions, medications_df, left_on='ENCOUNTER', right_on='ENCOUNTER', how='left')
+
+# 5. Create a Clean Patient Profile with Linked Conditions, Medications, and Dates
+patient_profiles = conditions_medications[['Id', 'AGE', 'GENDER', 'DESCRIPTION_x', 'CODE_x', 'START_x', 'STOP_x', 'DESCRIPTION_y', 'CODE_y', 'START_y', 'STOP_y', 'ENCOUNTER']]
+
+# Rename columns for clarity
+patient_profiles.columns = [
+    'PatientID', 'Age', 'Gender', 
+    'Condition_Description', 'Condition_Code', 'Condition_Start', 'Condition_End',
+    'Medication_Description', 'Medication_Code', 'Medication_Start', 'Medication_End', 
+    'Encounter'
+]
+
+# Display the final patient profile DataFrame
+patient_profiles.head()
+```
+
+```output
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 111 entries, 0 to 110
+Data columns (total 28 columns):
+ #   Column               Non-Null Count  Dtype  
+---  ------               --------------  -----  
+ 0   Id                   111 non-null    object 
+ 1   BIRTHDATE            111 non-null    object 
+ 2   DEATHDATE            11 non-null     object 
+ 3   SSN                  111 non-null    object 
+ 4   DRIVERS              96 non-null     object 
+ 5   PASSPORT             88 non-null     object 
+ 6   PREFIX               89 non-null     object 
+ 7   FIRST                111 non-null    object 
+ 8   MIDDLE               91 non-null     object 
+ 9   LAST                 111 non-null    object 
+ 10  SUFFIX               1 non-null      object 
+ 11  MAIDEN               34 non-null     object 
+ 12  MARITAL              78 non-null     object 
+ 13  RACE                 111 non-null    object 
+ 14  ETHNICITY            111 non-null    object 
+ 15  GENDER               111 non-null    object 
+ 16  BIRTHPLACE           111 non-null    object 
+ 17  ADDRESS              111 non-null    object 
+ 18  CITY                 111 non-null    object 
+ 19  STATE                111 non-null    object 
+...
+ 26  HEALTHCARE_COVERAGE  111 non-null    float64
+ 27  INCOME               111 non-null    int64  
+dtypes: float64(5), int64(2), object(21)
+memory usage: 24.4+ KB
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 5963 entries, 0 to 5962
+Data columns (total 13 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   START              5963 non-null   object 
+ 1   STOP               5689 non-null   object 
+ 2   PATIENT            5963 non-null   object 
+ 3   PAYER              5963 non-null   object 
+ 4   ENCOUNTER          5963 non-null   object 
+ 5   CODE               5963 non-null   int64  
+ 6   DESCRIPTION        5963 non-null   object 
+ 7   BASE_COST          5963 non-null   float64
+ 8   PAYER_COVERAGE     5963 non-null   float64
+ 9   DISPENSES          5963 non-null   int64  
+ 10  TOTALCOST          5963 non-null   float64
+ 11  REASONCODE         5132 non-null   float64
+ 12  REASONDESCRIPTION  5132 non-null   object 
+dtypes: float64(4), int64(2), object(7)
+memory usage: 605.7+ KB
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 3754 entries, 0 to 3753
+Data columns (total 7 columns):
+ #   Column       Non-Null Count  Dtype 
+---  ------       --------------  ----- 
+ 0   START        3754 non-null   object
+ 1   STOP         2702 non-null   object
+ 2   PATIENT      3754 non-null   object
+ 3   ENCOUNTER    3754 non-null   object
+ 4   SYSTEM       3754 non-null   object
+ 5   CODE         3754 non-null   int64 
+ 6   DESCRIPTION  3754 non-null   object
+dtypes: int64(1), object(6)
+memory usage: 205.4+ KB
+```
+
+Any other data pieces you'd like to see before we proceed with our discussion? If not, continue, else say 'Yes, id like to see...'
+
+I have decided to use the scyspacy python library to perform NER on free text present in the exclusion criteria. 
+
+Let's have a look at my sample code and output one one piece of text. 
+
+```python
+import spacy
+from scispacy.abbreviation import AbbreviationDetector
+from scispacy.linking import EntityLinker
+
+# Load the large scientific language model
+nlp = spacy.load("en_core_sci_lg")
+
+# Add the abbreviation detector to the pipeline
+nlp.add_pipe("abbreviation_detector")
+
+# Add the UMLS Entity Linker (links to UMLS which includes SNOMED-CT and RxNorm)
+nlp.add_pipe("scispacy_linker", config={
+    "resolve_abbreviations": True,  # To link long forms of abbreviations
+    "linker_name": "umls" # use this for conditions and exclusion criteria
+    # "linker_name": "rxnorm" # use this for medications
+})
+
+# Example clinical text with abbreviations and conditions
+text = "Positive hepatitis B surface antigen and hepatitis B virus quantification \\> 1 × 1000 copies/ml, or positive anti-hepatitis C virus antibody;"
+
+# Process the text to extract entities and link to UMLS concepts (including SNOMED-CT)
+doc = nlp(text)
+
+linker = nlp.get_pipe("scispacy_linker")
+print(doc)
+# Display abbreviations and their long forms
+print("Abbreviations and their long forms:")
+for abrv in doc._.abbreviations:
+    print(f"{abrv} ({abrv.start}, {abrv.end}) -> {abrv._.long_form}")
+
+# Iterate over the entities in the text and link to UMLS or RxNorm concepts
+print("\nEntities and their UMLS/RxNorm mappings:")
+for entity in doc.ents:
+    # print(f"\nEntity Full: {entity}")
+    # print(f"\nEntity: {entity.text}, Type: {entity.label_}, Entity ID: {entity._.kb_ents}")
+
+    # for umls_ent in entity._.kb_ents:
+    #     print(linker.kb.cui_to_entity[umls_ent[0]], end="\n##################\n")
+    # Get the UMLS or RxNorm entities and their confidence scores
+    for kb_ent in entity._.kb_ents:
+        concept_id, score = kb_ent
+        concept = linker.kb.cui_to_entity[concept_id]
+        # for field in concept._fields:
+        #     print(f"{field}: {getattr(concept, field)}")
+        print(f"  Concept ID (CUI/RxNorm ID): {concept_id}")
+        print(f"  Score: {score}")
+        print(f"  Preferred name: {concept.canonical_name}")
+        print(f"  Definition: {concept.definition}")
+        print(f"  Semantic types: {concept.types}")
+        print(end="\n##################\n")  # For RxNorm/SNOMED-CT
+```
+
+```output
+Positive hepatitis B surface antigen and hepatitis B virus quantification \> 1 × 1000 copies/ml, or positive anti-hepatitis C virus antibody;
+Abbreviations and their long forms:
+
+Entities and their UMLS/RxNorm mappings:
+  Concept ID (CUI/RxNorm ID): C0149709
+  Score: 0.9836849570274353
+  Preferred name: Hepatitis B surface antigen positive
+  Definition: An indication that the hepatitis B virus surface protein antigen has been detected in a sample.
+  Semantic types: ['T034']
+
+##################
+  Concept ID (CUI/RxNorm ID): C1504344
+  Score: 0.8789185285568237
+  Preferred name: Hepatitis B Antigen Positive
+  Definition: An indication that hepatitis B antigens have been detected in a sample.
+  Semantic types: ['T034']
+
+##################
+  Concept ID (CUI/RxNorm ID): C0019168
+  Score: 0.8550859093666077
+  Preferred name: Hepatitis B Surface Antigens
+  Definition: Those hepatitis B antigens found on the surface of the Dane particle and on the 20 nm spherical and tubular particles. Several subspecificities of the surface antigen are known. These were formerly called the Australia antigen.
+  Semantic types: ['T116', 'T121', 'T129']
+
+##################
+  Concept ID (CUI/RxNorm ID): C0062527
+  Score: 0.8550859093666077
+  Preferred name: hepatitis B surface antigen vaccine
+  Definition: A non-infectious mixture containing recombinant hepatitis B surface antigen (HBsAg) in a liquid vehicle. Immunization with the hepatitis B vaccine induces the formation of specific anti-hepatitis B antibodies and an active immunity against hepatitis B infection.
+  Semantic types: ['T116', 'T121', 'T129']
+
+##################
+  Concept ID (CUI/RxNorm ID): C0201477
+  Score: 0.8550859093666077
+  Preferred name: Hepatitis B surface antigen measurement
+  Definition: A determination of the presence of hepatitis B virus surface antigen.
+  Semantic types: ['T059']
+
+##################
+  Concept ID (CUI/RxNorm ID): C0019169
+  Score: 0.9809781312942505
+  Preferred name: hepatitis B virus
+  Definition: The type species of the genus ORTHOHEPADNAVIRUS which causes human HEPATITIS B and is also apparently a causal agent in human HEPATOCELLULAR CARCINOMA. The Dane particle is an intact hepatitis virion, named after its discoverer. Non-infectious spherical and tubular particles are also seen in the serum.
+  Semantic types: ['T005']
+
+##################
+  Concept ID (CUI/RxNorm ID): C0019186
+  Score: 0.9508165121078491
+  Preferred name: Hepatitis Viruses
+  Definition: Any of the viruses that cause inflammation of the liver. They include both DNA and RNA viruses as well viruses from humans and animals.
+  Semantic types: ['T005']
+
+##################
+  Concept ID (CUI/RxNorm ID): C0042721
+  Score: 0.9508165121078491
+  Preferred name: Viral hepatitis
+  Definition: An acute or chronic inflammation of the liver parenchyma caused by viruses. Representative examples include hepatitis A, B, and C, cytomegalovirus hepatitis, and herpes simplex hepatitis.
+  Semantic types: ['T047']
+
+##################
+  Concept ID (CUI/RxNorm ID): C0376325
+  Score: 0.9151974320411682
+  Preferred name: hepatitis A virus
+  Definition: A species in the genus HEPATOVIRUS containing one serotype and two strains: HUMAN HEPATITIS A VIRUS and Simian hepatitis A virus causing hepatitis in humans (HEPATITIS A) and primates, respectively.
+  Semantic types: ['T005']
+
+##################
+  Concept ID (CUI/RxNorm ID): C0019164
+  Score: 0.9086118340492249
+  Preferred name: Hepatitis B Antibodies
+  Definition: Antibodies to the HEPATITIS B ANTIGENS, including antibodies to the surface (Australia) and core of the Dane particle and those to the "e" antigens.
+  Semantic types: ['T116', 'T121', 'T129']
+
+##################
+  Concept ID (CUI/RxNorm ID): C1709793
+  Score: 0.9793488383293152
+  Preferred name: Quantitation
+  Definition: The act of measuring or estimating a quantity.
+  Semantic types: ['T081']
+
+##################
+  Concept ID (CUI/RxNorm ID): C5552867
+  Score: 0.8459975719451904
+  Preferred name: Quantification Test
+  Definition: A test whose operational purpose is to determine the amount or concentration of a substance or organism.
+  Semantic types: ['T059']
+
+##################
+  Concept ID (CUI/RxNorm ID): C2984008
+  Score: 0.792138934135437
+  Preferred name: Image Quantification
+  Definition: The process of measuring attributes of an image, by human sense or machine observations and experiences, and mapping them into members of some set of numbers or coded concepts.
+  Semantic types: ['T052']
+
+##################
+  Concept ID (CUI/RxNorm ID): C5206117
+  Score: 0.7733787298202515
+  Preferred name: SILAC Quantification
+  Definition: A proteomic quantitation method where a sample is produced using stable isotope labeling with amino acids in cell culture (SILAC) before being subjected to protein digestion and mass spectrometry-based quantification analysis.
+  Semantic types: ['T170']
+
+##################
+  Concept ID (CUI/RxNorm ID): C5206119
+  Score: 0.7282177805900574
+  Preferred name: Selected Reaction Monitoring Quantification
+  Definition: A method for quantifying tandem mass spectrometry data following a selected reaction monitoring (SRM)-based experiment.
+  Semantic types: ['T170']
+
+##################
+  Concept ID (CUI/RxNorm ID): C1446409
+  Score: 0.996591329574585
+  Preferred name: Positive
+  Definition: Involving advantage or good.
+  Semantic types: ['T033']
+
+##################
+  Concept ID (CUI/RxNorm ID): C1514241
+  Score: 0.996591329574585
+  Preferred name: Positive Finding
+  Definition: A finding of abnormality following an examination or observation confirming something, such as the presence of a disease, condition, or microorganism.
+  Semantic types: ['T033']
+
+##################
+  Concept ID (CUI/RxNorm ID): C2825490
+  Score: 0.996591329574585
+  Preferred name: Positive Charge
+  Definition: Having a deficiency of electrons; having a higher electric potential.
+  Semantic types: ['T080']
+
+##################
+  Concept ID (CUI/RxNorm ID): C3812269
+  Score: 0.996591329574585
+  Preferred name: Positive Number
+  Definition: A quantity having a value greater than zero.
+  Semantic types: ['T081']
+
+##################
+  Concept ID (CUI/RxNorm ID): C4727483
+  Score: 0.996591329574585
+  Preferred name: BRAF Gene Rearrangement
+  Definition: A molecular abnormality indicating rearrangement of the BRAF gene.
+  Semantic types: ['T049']
+
+##################
+  Concept ID (CUI/RxNorm ID): C0166049
+  Score: 0.8858968019485474
+  Preferred name: Hepatitis C Antibodies
+  Definition: Antibodies to the HEPATITIS C ANTIGENS including antibodies to envelope, core, and non-structural proteins.
+  Semantic types: ['T116', 'T129']
+
+##################
+  Concept ID (CUI/RxNorm ID): C0281863
+  Score: 0.8827057480812073
+  Preferred name: Hepatitis C Virus Antibody Positive
+  Definition: An indication that antibodies that recognize the hepatitis C virus have been detected in a sample.
+  Semantic types: ['T034']
+
+##################
+  Concept ID (CUI/RxNorm ID): C0369334
+  Score: 0.836918830871582
+  Preferred name: Hepatitis B Virus Surface Antibody
+  Definition: An antibody produced by B lymphocytes to the hepatitis B surface antigen as part of the immune response to hepatitis B viral infection.
+  Semantic types: ['T116', 'T129']
+
+##################
+  Concept ID (CUI/RxNorm ID): C0062524
+  Score: 0.8264042139053345
+  Preferred name: hepatitis A virus antibodies
+  Definition: An antibody produced by B lymphocytes in response to hepatitis A enteroviral infection.
+  Semantic types: ['T116', 'T129']
+
+##################
+  Concept ID (CUI/RxNorm ID): C0262506
+  Score: 0.815658450126648
+  Preferred name: Hepatitis B core antibody positive
+  Definition: An indication that antibodies that recognize a hepatitis B virus core protein have been detected in a sample.
+  Semantic types: ['T034']
+
+##################
+```
+
+Here's where my head's at -
+
+1. The conditions and medications df have 'DESCRIPTION' column each, lets create a UMLS_CODE column and save the codes that get extracted from the descriptions. For medications lets use the rxnorm linker and for conditions lets use the umls linker.
+
+2. While creating the patient profile, create a new column called Medication_UMLS_CODES and Condition_UMLS_CODES within the patient_profiles_df and bring the codes there. Also create a common column called UMLS_CODES where both types of codes are in the same list. 
+
+3. Also create a patient_profile_grouped df where, all the descriptions, codes  etc are concatenated into lists. In this grouped df, all I want is the raw descriptions with all info (concatenated) and the UMLS_CODES codes (3 columns = med, condition, and concatenated).
+
+Let's get this much done and we can proceed further. Modify my existing codebase. Take your time, lay out a robust plan before you attempt to update the code.
+
+
+_____________________________________

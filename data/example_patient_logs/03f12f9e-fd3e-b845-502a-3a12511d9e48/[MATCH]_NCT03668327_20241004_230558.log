@@ -1,0 +1,36 @@
+Before sharing the logs, here are the definitions to any UMLS code you will see:
+
+Patient ID: 03f12f9e-fd3e-b845-502a-3a12511d9e48
+Age: 0
+Gender: M
+Conditions: ['Medication review due (situation)']
+Medications: []
+########
+Trial Details
+Title: Preterm Birth Cohort Study in Guangzhou
+1. Inclusion Criteria:
+   - Born before 37 weeks of gestation
+   - Born in Guangzhou Women and Children's Medical Center
+   - Intended to remain in Guangzhou for more than 3 years
+2. Exclusion Criteria:
+   - Multiple birth
+   - Stillbirth
+   - With major congenital abnormalities
+##########
+Match Check:
+1. Age = 0 vs [nan, nan] = MATCH
+2. Sex = M vs ALL = MATCH
+3. Health = Not Healthy vs Patients = MATCH
+4. Exclusion Criteria:
+   - Criterion 1: Multiple birth = MATCH
+   - Criterion 2: Stillbirth = MATCH
+   - Criterion 3: With major congenital abnormalities = MATCH
+   - Exclusion Criteria Check: MATCH
+API Check:
+inclusionCriteriaMet:
+	- Patient meets the age criteria.
+exclusionCriteriaMet:
+	- Patient does not have multiple birth as required.
+	- Patient does not have stillbirth as required.
+	- Patient does not have major congenital abnormalities as required.
+patientIsEligibleForTrial: True

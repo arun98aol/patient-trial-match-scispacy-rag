@@ -1,0 +1,46 @@
+Before sharing the logs, here are the definitions to any UMLS code you will see:
+- Code: C3244316
+  Name: medication - HL7 publishing domain
+  Definition: <b>Description:</b>Represents the HL7 content "domain" that supports medication - and "deals with the description of a medicine for the purposes of messaging information about medicines" and the applications of these descriptions.<i>UsageNote:</i>V3 Specifications are published in a set of "domains", which contain interactions and related specifications for a single area of health care within which can be supported by a single, coherent set of interoperability specifications.
+- Code: C0013227
+  Name: Pharmaceutical Preparations
+  Definition: Drugs intended for human or veterinary use, presented in their finished dosage form. Included here are materials used in the preparation and/or formulation of the finished dosage form.
+
+Patient ID: 03f12f9e-fd3e-b845-502a-3a12511d9e48
+Age: 0
+Gender: M
+Conditions: ['Medication review due (situation)']
+Medications: []
+########
+Trial Details
+Title: Preschool Attention and Sleep Support (PASS)
+1. Inclusion Criteria:
+   - child must be ages 3-5 years at intake
+   - child with score of 30 on the Child Sleep Habits Survey-Short Form and a caregiver rating of child's sleep problems as moderate/severe
+   - child with ≥80th percentile on the clinician-rated ADHD-RS based on age and sex norms, with at least 4 symptoms in the clinically significant range (scores of 2-3) in either the inattention or hyperactive/impulsive domains
+   - parent/caregiver must have ability to speak, read, and write in English
+   - parent/caregiver must have access to a device with internet and/or smartphone to access telehealth visits
+   - parent/caregiver must have ability to follow written and verbal instructions
+   - parent/caregiver must have ability and willingness to comply with study procedures.
+2. Exclusion Criteria:
+   - child with suspected obstructive sleep apnea or restless legs syndrome (via screening questionnaires)
+   - child with current use of stimulant medication, other psychotropics, or medications for sleep (prescription or over-the-counter, including melatonin)
+   - child with caregiver report of psychiatric disorder other than ADHD requiring treatment (medication and/or therapy), Autism Spectrum Disorder, or intellectual disability
+   - parent/caregiver is currently participating in another parent training intervention or have previously participated in another parent training intervention in the past 6 months.
+   - Severe and/or uncontrolled medical condition (e.g., pulmonary and neurological conditions such as cystic fibrosis and seizure disorder) that would interfere with sleep and/or study participation according to the study team
+##########
+Match Check:
+1. Age = 0 vs [nan, nan] = MATCH
+2. Sex = M vs ALL = MATCH
+3. Health = Not Healthy vs Patients = MATCH
+4. Exclusion Criteria:
+   - Criterion 1: child with suspected obstructive sleep apnea or restless legs syndrome (via screening questionnaires) = MATCH
+   - Criterion 2: child with current use of stimulant medication, other psychotropics, or medications for sleep (prescription or over-the-counter, including melatonin) = NO MATCH
+      + [C3244316] Medication review due (situation)
+      + [C0013227] Medication review due (situation)
+   - Criterion 3: child with caregiver report of psychiatric disorder other than ADHD requiring treatment (medication and/or therapy), Autism Spectrum Disorder, or intellectual disability = NO MATCH
+      + [C3244316] Medication review due (situation)
+      + [C0013227] Medication review due (situation)
+   - Criterion 4: parent/caregiver is currently participating in another parent training intervention or have previously participated in another parent training intervention in the past 6 months. = MATCH
+   - Criterion 5: Severe and/or uncontrolled medical condition (e.g., pulmonary and neurological conditions such as cystic fibrosis and seizure disorder) that would interfere with sleep and/or study participation according to the study team = MATCH
+   - Exclusion Criteria Check: NO MATCH

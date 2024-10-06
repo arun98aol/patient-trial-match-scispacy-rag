@@ -1,0 +1,42 @@
+Before sharing the logs, here are the definitions to any UMLS code you will see:
+
+Patient ID: 03f12f9e-fd3e-b845-502a-3a12511d9e48
+Age: 0
+Gender: M
+Conditions: ['Medication review due (situation)']
+Medications: []
+########
+Trial Details
+Title: "Lung Barometric Measurements in Normal And in Respiratory Distressed Lungs"
+1. Inclusion Criteria:
+   - Patients above18 years
+   - ASA 1-3
+   - Planned/acute ventilator treatment in ICU or OR
+2. Exclusion Criteria:
+   - Patients under 18 years
+   - ASA 4 and above
+   - severe COPD/emphysema/heart failure
+   - PEEP\>16 and/or FiO2 \>80%
+   - elevated intracranial pressure
+   - defect coagulation
+   - non-treated known or suspected pneumothorax
+##########
+Match Check:
+1. Age = 0 vs [nan, nan] = MATCH
+2. Sex = M vs ALL = MATCH
+3. Health = Not Healthy vs Patients = MATCH
+4. Exclusion Criteria:
+   - Criterion 1: Patients under 18 years = MATCH
+   - Criterion 2: ASA 4 and above = MATCH
+   - Criterion 3: severe COPD/emphysema/heart failure = MATCH
+   - Criterion 4: PEEP\>16 and/or FiO2 \>80% = MATCH
+   - Criterion 5: elevated intracranial pressure = MATCH
+   - Criterion 6: defect coagulation = MATCH
+   - Criterion 7: non-treated known or suspected pneumothorax = MATCH
+   - Exclusion Criteria Check: MATCH
+API Check:
+inclusionCriteriaMet:
+	- Patient meets the sex criteria.
+exclusionCriteriaMet:
+	- Patient does not meet the age criteria as they are under 18.
+patientIsEligibleForTrial: False

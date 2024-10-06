@@ -1,0 +1,50 @@
+Before sharing the logs, here are the definitions to any UMLS code you will see:
+
+Patient ID: 03f12f9e-fd3e-b845-502a-3a12511d9e48
+Age: 0
+Gender: M
+Conditions: ['Medication review due (situation)']
+Medications: []
+########
+Trial Details
+Title: Quantitative Computed Tomography for Mortality Risk Stratification in ARDS
+1. Inclusion Criteria:
+   - Patient aged 15 or older with ARDS according to the Berlin definition
+   - invasive mechanical ventilation with PaO2/FiO2 ≤ 300 mm Hg
+   - with computed tomography acquired at both end-expiration and end-inspiration, or at both PEEP 5 and 15 cm H2O at end-expiration
+   - PEEP setting according to a PEEP/FiO2 table, with secondary adjustment according to hemodynamic tolerance
+   - Tidal volume 6 ml/kg of predicted body weight or less
+2. Exclusion Criteria:
+   - Use of contrast agent during computed tomography acquisition
+   - ARDS criteria onset since more than 72 hours or ECMO onset since more than 72 hours
+   - Proven COPD
+   - Pneumothorax or bronchopleural fistula
+   - Patient with spontaneous breathing preventing realization of end-expiratory and end-inspiratory pauses
+   - Previous inclusion in current study
+   - Patient under a legal protective measure
+##########
+Match Check:
+1. Age = 0 vs [nan, nan] = MATCH
+2. Sex = M vs ALL = MATCH
+3. Health = Not Healthy vs Patients = MATCH
+4. Exclusion Criteria:
+   - Criterion 1: Use of contrast agent during computed tomography acquisition = MATCH
+   - Criterion 2: ARDS criteria onset since more than 72 hours or ECMO onset since more than 72 hours = MATCH
+   - Criterion 3: Proven COPD = MATCH
+   - Criterion 4: Pneumothorax or bronchopleural fistula = MATCH
+   - Criterion 5: Patient with spontaneous breathing preventing realization of end-expiratory and end-inspiratory pauses = MATCH
+   - Criterion 6: Previous inclusion in current study = MATCH
+   - Criterion 7: Patient under a legal protective measure = MATCH
+   - Exclusion Criteria Check: MATCH
+API Check:
+inclusionCriteriaMet:
+	- Patient meets the sex criteria.
+exclusionCriteriaMet:
+	- Patient does not have Use of contrast agent during computed tomography acquisition as required.
+	- Patient does not have ARDS criteria onset since more than 72 hours or ECMO onset since more than 72 hours as required.
+	- Patient does not have Proven COPD as required.
+	- Patient does not have Pneumothorax or bronchopleural fistula as required.
+	- Patient does not have Patient with spontaneous breathing preventing realization of end-expiratory and end-inspiratory pauses as required.
+	- Patient does not have Previous inclusion in current study as required.
+	- Patient does not have Patient under a legal protective measure as required.
+patientIsEligibleForTrial: False
