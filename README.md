@@ -24,35 +24,37 @@ Follow the notebook for next steps - **Patient Trial Match [Submission].ipynb**
  - Trials data is not uploaded to this repo, so, use reload=True to fetch again or download a sample dataset online. (takes hours to get all, so set n=1000)
  - Outputs (JSON and CSV) in data/output folder
 
-### Folder Structure
+### Folder Structure (Here's how it should look for everything to run great)
 
 ```bash
 .
-├── .venv/                          # Virtual environment for dependencies (not shared)
-├── data/                           # Data folder
-│   ├── annotated_synthea/          # Annotated Synthea patient data
-│   ├── example_patient_logs/       # Logs generated from matching patients with trials
-│   ├── output/                     # JSON and log outputs for matched results
-│   ├── patient/                    # Folder containing patient-related data
-│   ├── trials/                     # Folder containing clinical trial data
-│   ├── umls_codes.csv              # UMLS codes extracted for patient-trial matching
-├── functions/                      # Python scripts for core functionalities
-│   ├── criteria_checks.py          # Functions to check inclusion/exclusion criteria
-│   ├── llm_apis.py                 # Functions handling LLM API calls (e.g., OpenAI/Mistral)
-│   ├── patient_trial_matcher.py    # Main logic for matching patient profiles to trials
-│   ├── patients.py                 # Functions for processing patient data
-│   ├── scispacy_models.py          # Functions for integrating SciSpacy and UMLS models
-│   ├── trials.py                   # Functions for processing clinical trial data
-├── synthea_100/                    # Original synthetic patient data from Synthea
-├── .env                            # Environment variables file (API keys, etc.)
-├── .gitignore                      # Git ignore file to prevent certain files from being committed
-├── 00. Data Collection & Research.ipynb  # Notebook for gathering clinical trials and research
-├── 01. Data Exploration.ipynb             # Notebook exploring and analyzing patient/trial data
-├── 02. Setting Up Basic Match.ipynb       # Notebook implementing the initial matching logic
-├── Patient Trial Match [Submission].ipynb # Main submission notebook with end-to-end pipeline
-├── LLM_PromptExample1.txt                 # Example LLM prompt 1 for clinical trial matching
-├── LLM_PromptExample2.txt                 # Example LLM prompt 2 for clinical trial matching
-├── requirements.txt                       # Python dependencies for the project
+├── data
+│   ├── annotated_synthea/           # Processed synthetic dataset with UMLS codes.
+│   ├── example_patient_logs/        # Example patient logs.
+│   ├── output/                      # Task output folder.
+│   ├── patient/                     # Processed patient files.
+│   ├── trials/                      # Processed trials files. Should contain df_trials_processed.csv
+│   ├── LLM_PromptExample1.txt       # Brainstorming with large language models (example 1).
+│   ├── LLM_PromptExample2.txt       # Brainstorming with large language models (example 2).
+│   └── umls_codes.csv               # Relevant UMLS codes for trials and patients (definitions and aliases), generated using SciSpacy models.
+├── functions
+│   ├── __pycache__/                 # Python cache files.
+│   ├── criteria_checks.py           # Contains all the basic criteria checks.
+│   ├── llm_apis.py                  # Handles API calls to large language models.
+│   ├── patient_trial_matcher.py     # Main matching algorithm for patient-trial.
+│   ├── patients.py                  # Patient data processing scripts.
+│   ├── scispacy_models.py           # SciSpacy model processing.
+│   └── trials.py                    # Trial data processing scripts.
+├── synthea_100/                     # Original downloaded sample dataset of patients.
+├── .env                             # Important! Contains API keys and environment variables.
+├── .gitignore                       # Standard Git ignore file for excluding certain files from the repository.
+├── 00. Data Collection & Research.ipynb   # Notebook for data collection and research.
+├── 01. Data Exploration.ipynb       # Notebook for initial data exploration.
+├── 02. Setting Up Basic Match.ipynb # Notebook for setting up a basic match algorithm.
+├── LICENSE                          # License for the project.
+├── Patient Trial Match [Submission].ipynb   # Main submission notebook for patient-trial matching.
+├── README.md                        # README file with project overview.
+└── requirements.txt                 # File listing Python dependencies for the project.
 ```
 
 ### Functions
