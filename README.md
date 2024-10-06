@@ -17,8 +17,8 @@ git clone https://github.com/your-username/patient-trial-matching.git
 cd patient-trial-matching
 ```
 
-Follow the notebook for next steps - Patient Trial Match [Submission].ipynb
-I used Python 3.11.9, Windows 
+Follow the notebook for next steps - **Patient Trial Match [Submission].ipynb**
+I used Python 3.11.9, Windows.
 
 
 ### Folder Structure
@@ -55,7 +55,7 @@ I used Python 3.11.9, Windows
 ### Functions
 
 - **llm_apis.py:**
-  - This module contains functions that call LLM APIs (e.g., OpenAI's GPT or Mistral API) to help interpret trial criteria when they are not easily interpretable using traditional logic.
+  - This module contains functions that call LLM APIs (e.g., OpenAI's GPT or Mistral API) to help interpret trial criteria when they are not easily interpretable using traditional logic. **The call_openai_api function decides which API is used (Azure/OpenAI) incase you need to modify that. Additionally, the 'patient_trial_matcher.py' file defines which api is used OpenAI or Mistral incase you need to change that.**
 
 - **patient_trial_matcher.py:**
   - The main logic for matching patients to clinical trials. This function integrates rule-based matching, LLM-assisted checks, and generates output in JSON format.
