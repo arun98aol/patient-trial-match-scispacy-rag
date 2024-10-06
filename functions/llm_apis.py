@@ -233,12 +233,12 @@ def call_openai_api(
     ):  
     try:
         time.sleep(0.5)
-        # client = OpenAI()
-        client = AzureOpenAI(
-            api_key=os.getenv("AZURE_OPENAI_API_KEY"),  
-            api_version="2024-07-01-preview",
-            azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
-        )
+        client = OpenAI()
+        # client = AzureOpenAI(
+        #     api_key=os.getenv("AZURE_OPENAI_API_KEY"),  
+        #     api_version="2024-07-01-preview",
+        #     azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+        # )
 
         response = client.chat.completions.create(  
             model=model,  
