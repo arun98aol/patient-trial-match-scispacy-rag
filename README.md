@@ -21,7 +21,7 @@ Follow the notebook for next steps - **Patient Trial Match [Submission].ipynb**
  - I used Python 3.11.9, Windows.
  - Refer functions section below to change LLM APIs.
  - This notebook contains the takeaway and challenges faced.
-
+ - Trials data is not uploaded to this repo, so, use reload=True to fetch again or download a sample dataset online.
 
 ### Folder Structure
 
