@@ -13,8 +13,8 @@ The repository is structured with modular functions, including handling trial cr
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/patient-trial-matching.git
-cd patient-trial-matching
+git clone https://github.com/arun98aol/patient-trial-match-scispacy-rag.git
+cd patient-trial-match-scispacy-rag
 ```
 
 Follow the notebook for next steps - **Patient Trial Match [Submission].ipynb**
